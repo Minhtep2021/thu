@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif-romantic: 'Cormorant Garamond', Georgia, serif;
+    --font-sans-vietnamese: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background-color: #16070d;
+    color: #fdf6ef;
+    font-family: var(--font-sans-vietnamese);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+}
+
+.font-romantic {
+  font-family: var(--font-serif-romantic);
+}
+
+.font-vietnamese {
+  font-family: var(--font-sans-vietnamese);
+}
+
+@keyframes gentle-breathe {
+  0%, 100% {
+    transform: scale(1) translateY(0px);
+  }
+  50% {
+    transform: scale(1.032) translateY(-4px);
+  }
+}
+
+@keyframes heartbeat-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.035);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-7px) rotate(1.5deg);
+  }
+}
+
+@keyframes soundwave-bar {
+  0%, 100% {
+    transform: scaleY(0.35);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-breathe {
+  animation: gentle-breathe 4.4s ease-in-out infinite;
+}
+
+.animate-heartbeat {
+  animation: heartbeat-pulse 2.2s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 4.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-breathe,
+  .animate-heartbeat,
+  .animate-float-slow {
+    animation: none !important;
+  }
+}
+
+/* Subtle vintage paper grain for the love letter and keepsake card */
+.paper-texture {
+  background-color: #fbf5eb;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.75) 0%, transparent 55%),
+    radial-gradient(circle at 80% 85%, rgba(235, 212, 185, 0.45) 0%, transparent 60%),
+    linear-gradient(135deg, #fdf8f0 0%, #f6ebd9 100%);
+}

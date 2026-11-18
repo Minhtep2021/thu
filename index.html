@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Little Love Letter</title>
+    <meta name="description" content="An interactive romantic confession experience with an enchanted blooming rose, unfolding love letter, and celebration keepsake." />
+    <meta property="og:title" content="A Little Love Letter" />
+    <meta property="og:description" content="An interactive romantic confession experience with an enchanted blooming rose, unfolding love letter, and celebration keepsake." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        try {
+          var currentFetch = window.fetch ? window.fetch.bind(window) : undefined;
+          if (currentFetch) {
+            Object.defineProperty(window, 'fetch', {
+              configurable: true,
+              enumerable: true,
+              get: function () {
+                return currentFetch;
+              },
+              set: function (fn) {
+                currentFetch = fn;
+              },
+            });
+          }
+        } catch (_e) {
+          // Ignore if descriptor is locked
+        }
+
+        window.addEventListener(
+          'error',
+          function (event) {
+            if (
+              event &&
+              typeof event.filename === 'string' &&
+              event.filename.indexOf('chrome-extension://') === 0
+            ) {
+              event.stopImmediatePropagation();
+              event.preventDefault();
+            }
+          },
+          true
+        );
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

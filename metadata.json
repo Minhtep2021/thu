@@ -1,0 +1,6 @@
+{
+  "name": "A Little Love Letter",
+  "description": "An interactive romantic confession experience with an enchanted blooming rose, unfolding love letter, and celebration keepsake.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
